@@ -1,15 +1,16 @@
 import Counter from "./Counter"
 import Hello from "./Hello"
 function App() {
-  const vardi=["Emils","Janis","Kristaps"]
-  const vardiJSX = vardi.map((theName,index)=>{
-return <Hello defaultName={theName} key={index}/>
+    const allNames=["Emils","Janis","Kristaps"]
+
+const HelloJSX = allNames.map((name,index) =>{
+return <Hello key={index} defaultName ={name} />
   });
 
   return (
   <>
   <Counter/>
-  {vardiJSX}
+  {HelloJSX}
   </>
   );
 }
